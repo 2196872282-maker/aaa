@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>你的论文标题</title>
+  <style>
+    :root { --ink:#1d2433; --muted:#667085; --line:#e5e7eb; --accent:#2563eb; --bg:#fff; --soft:#f8fafc; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); background:var(--bg); font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif; }
+    .wrap { max-width:980px; margin:auto; padding:0 22px; }
+    header { text-align:center; padding:64px 0 36px; }
+    h1 { margin:0 auto 14px; max-width:900px; font-size:clamp(1.8rem,4vw,3rem); line-height:1.2; }
+    .subtitle { color:var(--muted); font-size:1.1rem; margin:0 auto 18px; }
+    .authors { margin:18px auto; }
+    .authors a { color:var(--accent); text-decoration:none; }
+    .affiliation { color:var(--muted); }
+    .links { display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-top:24px; }
+    .links a { color:var(--ink); border:1px solid var(--ink); border-radius:999px; padding:7px 17px; text-decoration:none; }
+    .links a:hover { background:var(--ink); color:#fff; }
+    section { border-top:1px solid var(--line); padding:38px 0; }
+    h2 { margin:0 0 14px; font-size:1.65rem; }
+    h3 { margin:26px 0 8px; }
+    figure { margin:20px 0; }
+    figure img { width:100%; display:block; border:1px solid var(--line); border-radius:10px; }
+    figcaption { color:var(--muted); font-size:.92rem; margin-top:8px; text-align:center; }
+    .video { width:100%; max-height:600px; background:#111827; border-radius:10px; }
+    .grid { display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
+    .card { background:var(--soft); border:1px solid var(--line); border-radius:10px; padding:18px; }
+    pre { overflow:auto; background:#f3f4f6; border-radius:8px; padding:16px; font-size:.9rem; }
+    footer { border-top:1px solid var(--line); color:var(--muted); padding:28px 0 50px; text-align:center; }
+    @media (max-width:700px) { .grid { grid-template-columns:1fr; } header { padding-top:40px; } }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1>你的论文标题</h1>
+      <p class="subtitle">用一句话说明你的论文做了什么</p>
+      <p class="authors">
+        <a href="#">你的名字</a><sup>1</sup>,
+        <a href="#">合作者姓名</a><sup>1,2</sup>
+      </p>
+      <p class="affiliation"><sup>1</sup>你的单位　<sup>2</sup>合作者单位</p>
+      <nav class="links" aria-label="论文链接">
+        <a href="assets/paper.pdf">Paper</a>
+        <a href="https://arxiv.org/">arXiv</a>
+        <a href="https://github.com/">Code</a>
+        <a href="#citation">BibTeX</a>
+      </nav>
+    </header>
+
+    <!-- 如果有演示视频，把 assets/demo.mp4 上传到 assets 文件夹后取消下面注释 -->
+    <!--
+    <section>
+      <video class="video" controls playsinline poster="assets/poster.jpg">
+        <source src="assets/demo.mp4" type="video/mp4">
+      </video>
+    </section>
+    -->
+
+    <section>
+      <h2>Abstract</h2>
+      <p>在这里粘贴你的论文摘要。建议保持为一段完整文字，介绍问题、方法、主要结果和贡献。</p>
+    </section>
+
+    <section>
+      <h2>Overview</h2>
+      <figure>
+        <img src="assets/overview.png" alt="论文方法总览">
+        <figcaption>图 1：论文方法总览。请将你的图片命名为 overview.png 并上传到 assets 文件夹。</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Method</h2>
+      <p>在这里介绍你的核心方法，用通俗的语言说明输入、处理过程和输出。</p>
+      <figure>
+        <img src="assets/method.png" alt="论文方法结构">
+        <figcaption>图 2：方法结构图。</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Results</h2>
+      <div class="grid">
+        <div class="card"><h3>定性结果</h3><p>在这里介绍图片或视频结果，说明你的方法相比已有方法的优势。</p></div>
+        <div class="card"><h3>定量结果</h3><p>在这里填写最重要的实验数字，例如准确率、误差或提升比例。</p></div>
+      </div>
+      <figure>
+        <img src="assets/results.png" alt="实验结果">
+        <figcaption>图 3：实验结果。</figcaption>
+      </figure>
+    </section>
+
+    <section id="citation">
+      <h2>Citation</h2>
+      <pre>@article{yourpaper2026,
+  title   = {你的论文标题},
+  author  = {你的名字 and 合作者姓名},
+  year    = {2026}
+}</pre>
+    </section>
+  </main>
+
+  <footer>© 2026 你的名字 · Academic Project Page</footer>
+</body>
+</html>
